@@ -21,16 +21,20 @@ section {
     scroll-snap-align: start;
 }
 
-/* ----- Home Page Navbar----- */
+/* -------------------------------------------- Home Page Navbar ---------------------------- */
 
 .home {
     position: relative;
 }
 
 nav {
-    background: #0082e6;
+    /* background: #0082e6; */
+    background: rgba(17, 17, 17, .6);
+    box-shadow: 0 0 5px 5px rgba(255, 255, 255, 0.3);
     height: 80px;
     width: 100%;
+    z-index: 3;
+    position: fixed;
 }
 
 .text-box {
@@ -48,9 +52,10 @@ nav {
     margin: 50px 50px;
 }
 .text-box h3{
-    color: rgba(190, 190, 190, 0.8);
+    color: rgba(255, 255, 255, 0.9);
     font-size: 50px;
     margin-top: 5px;
+    text-shadow: 1px 1px 1px #ffffff;
 }
 
 
@@ -90,7 +95,8 @@ a:link, a:hover, a:visited, a:active {
 }
 
 a.active,  a:hover {
-    background: #1b9bff;
+    /* background: #1b9bff; */
+    background: rgb(45, 196, 163);
     transition: 0.5s;
 }
 
@@ -119,7 +125,60 @@ a.active,  a:hover {
         font-size: 16px;
     }
 
+    .text-box h3 {
+        font-size: 35px;
+    }
+
 }
+
+@media (max-width: 1135px) {
+
+    .text-box h3 {
+        font-size: 35px;
+    }
+
+}
+
+@media (max-width: 855px) {
+
+    .text-box h3 {
+        font-size: 30px;
+    }
+
+}
+
+@media (max-width: 762px) {
+
+    .text-box h3 {
+        font-size: 25px;
+    }
+
+}
+
+@media (max-width: 667px) {
+
+    .text-box h3 {
+        font-size: 20px;
+    }
+
+}
+
+@media (max-width: 567px) {
+
+    .text-box h3 {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 481px) {
+
+    .text-box h3 {
+        font-size: 10px;
+    }
+
+}
+
+
 
 @media (max-width: 962px) {
     .checkbtn {
@@ -149,17 +208,18 @@ a.active,  a:hover {
     
     a:hover, a.active {
         background: none;
-        color: #0082e6;
+        color: rgb(58, 255, 212);;
     }
 
     #check:checked ~ ul {
         left: 0;
+        z-index: 1000;
     }
 
 }
 
 
-/* -----Home Page Background----- */
+/* ------------------------------------------------ Home Page Background ------------------------- */
 
 .home .background {
     position: relative;
@@ -264,22 +324,96 @@ a.active,  a:hover {
     
 }
 
-/* ----- About Page -----*/
+/* ------------------------------------------------ About Page ---------------------------*/
 .about {
     background: rosybrown;
+    
 }
 
 /* ----- Skills Page -----*/
 .skills {
+    
     background: skyblue;
 }
 
-/* ----- Projects Page -----*/
+/* ------------------------------------------------ Projects Page ------------------------*/
+
 .projects {
-    background: slateblue;
+    background: #111;
 }
 
-/* ----- Form Page -----*/
+.projects .container {
+    position: relative;
+    max-width: 1000px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    transform-style: preserve-3d ;
+    margin: auto auto auto auto;
+    top: 80px;
+}
+
+.projects .card {
+    position: relative;
+    margin: 20px 0;
+    width: 300px;
+    height: 400px;
+    background: #fff;
+    transform-style: preserve-3d;
+    transform: perspective(2000px);
+    transition: 1s;
+    box-shadow: inset 300px 0 50px rgba(0,0,0,0.5);
+    border-radius: 25px;
+}
+
+.projects img {
+    width: 100%;
+    max-height: 100%;
+    border-radius: 25px;
+}
+
+.projects .card:hover {
+    z-index: 1000;
+    transform: perspective(2000px) rotate(-10deg);
+    box-shadow: inset 20px 0 50px rgba(0,0,0,0.5);
+    transform-style: preserve-3d ;
+}
+
+.projects .card .imgBox {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #000;
+    box-sizing: border-box;
+    transform-origin: left;
+    z-index: 1;
+    transition: 1s ;
+}
+
+.projects .card:hover .imgBox {
+    transform: rotateY(-135deg);
+    transform-style: preserve-3d;
+    z-index: 2;
+}
+
+.projects .card .imgBox .img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.projects .card .details {
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    padding:  20px;
+}
+
+/* ------------------------------------------ Form Page -----------------------*/
 .form {
     height: 100%;
     background: url(./img1.png);
@@ -297,6 +431,8 @@ form {
     margin: 0 auto;
     border-radius: 4px;
     padding: 55px 30px;
+    position: relative;
+    top: 90px;
 }
 
 .form form .title h2 {
