@@ -53,9 +53,9 @@ nav {
 }
 
 .text-container {
-    margin: 50px 50px;
+    margin: 50px 50px;  
 }
-.text-box h3{
+.text-box .text-container h3{
     color: rgba(255, 255, 255, 0.9);
     font-size: 50px;
     margin-top: 5px;
