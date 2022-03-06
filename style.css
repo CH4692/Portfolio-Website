@@ -478,9 +478,26 @@ a.active,  a:hover {
     transform: scaleY(0);
 }
 
+@media (max-width: 725px) {
+    .text-box2 {
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr;
+        height: 90vh;
+    }
 
+    .text-box2 .right {
+        margin: -30px auto;
+        justify-self: end;
+        align-self: start;
+    }
+    
+    .text-box2 .left {
+        margin: 0 auto;
+        align-self: center;
+        justify-self: start;
+    }
 
-
+}
 
 /* ----------------------------------- Skills Page --------------------------*/
 .skills {
@@ -505,7 +522,6 @@ a.active,  a:hover {
     width: 500px;
     margin: 60px auto;
     color: white;
-
 }
 
 .skills li {
@@ -552,6 +568,12 @@ a.active,  a:hover {
 .java {
     width: 90%;
     animation: java 2s;
+}
+
+@media (max-width: 543px) {
+    .skills .skills-container {
+        width: 300px;
+    }
 }
 
 @keyframes html {
@@ -676,6 +698,43 @@ a.active,  a:hover {
     width: 100%;
 }
 
+@media (max-width: 705px) {
+    .projects .text-box4 .projects-container {
+        grid-template-columns: 10em 10em 10em;
+        grid-template-rows:  10em 10em;
+    }
+}
+
+@media (max-width: 500px) {
+    .projects .text-box4 .projects-container {
+        grid-template-columns: 8em 8em 8em;
+        grid-template-rows:  8em 8em;
+    }
+}
+
+@media (max-width: 500px) {
+    .projects {
+        height: 200vh;
+        scroll-snap-align: end;
+        min-height: fit-content;
+    }
+    
+    body {
+        scroll-snap-type: none;
+        overflow-y: none;
+    }
+
+    .projects .text-box4 .projects-container {
+        grid-template-columns: 16em;
+        grid-template-rows:  repeat(6, 16em);
+        
+    }
+
+    .projects .text-box4 {
+        box-shadow: none;
+    }
+}
+
 
 /* ------------------------------------------ Form Page -----------------------*/
 .form {
@@ -793,7 +852,7 @@ form .icons a {
     line-height: 2em;
     text-align: center;
     font-weight: 600;
-    width: 3em;
+    max-width: 3em;
     margin-right: 10px;
 }
 
@@ -803,7 +862,7 @@ form .action input[type="reset"]:hover, form .icons a:hover {
     color: var(--dominantColor);
 }
 
-@media (max-width: 480px) {
+@media (max-width: 620px) {
     form .half {
         flex-direction: column;
     }
