@@ -9,7 +9,7 @@
     <title>Portfolio Website</title>
 </head>
 <body>
-    <section class="home page">
+    <section id="home" class="home page">
         <nav>
             <input type="checkbox" id="check">
             <label for="check" class="checkbtn">
@@ -17,11 +17,11 @@
             </label>
             <label class="logo"><label class="color-text" >P</label>ortfolio Logo</label>  <!--Need to add a Logo here-->
             <ul>
-                <li><a class="active" href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Skills</a></li>
-                <li><a href="#">Projects</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a class="active" href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
         <div class="text-box">
@@ -854,7 +854,7 @@
                 </div>
             </div>
     </section>
-    <section class="about page">
+    <section id="about" class="about page">
         <div class="text-box2">
             <div class="left">
                 <h3>About Me</h3>
@@ -869,7 +869,7 @@
             </div>
         </div>
     </section>
-    <section class="skills page">
+    <section id="skills" class="skills page">
         <div class="text-box3">
             <div class="skills-container">
             <h1>My skills</h1>
@@ -906,7 +906,7 @@
             </div>
         </div>
     </section>
-    <section class="projects page">
+    <section id="projects" class="projects page">
         <div class="text-box4">
             <div class="projects-container">
                 <div class="project1 card">
@@ -930,35 +930,34 @@
             </div>
         </div> 
     </section>
-    <section class="form page">
-        <form action="">
+    <section id="contact" class="form page">
+        <form action="https://formsubmit.co/charles.heller@hotmail.de" method="POST">
             <div class="title">
                 <h2>SEND A MESSAGE</h2>
             </div>
             <div class="half">
                 <div class="item">
                     <label for="name">NAME</label>
-                    <input type="text" id="name">
+                    <input type="text" name="name" id="name" required>
                 </div>
                 <div class="item">
-                   <label for="email">EMAIL</label>
-                   <input type="text" id="email">
+                   <label for="email" >EMAIL</label>
+                   <input type="text" name="email" id="email" required>
                </div>
             </div>
             <div class="full">
                 <label for="message">MESSAGE</label>
-                <textarea name="" id="message"></textarea>
+                <textarea name="" name="message" id="message" required></textarea>
             </div>
             <div class="action">
                 <input type="submit" value="SEND MESSAGE">
                 <input type="reset" value="RESET">
             </div>
-            <div class="icons">
-                
-               <a href="" class="fa fa-twitter"></a>
-               <a href="" class="fa fa-facebook"></a>
-               <a href="" class="fa fa-instagram"></a>
-               <a href="" class="fa fa-github"></a>
+            <div class="icons">                
+               <a href="https://twitter.com/CharlesHeller46" target="_blank" rel="noopener noreferrer" class="fa fa-twitter"></a>
+               <a href="https://www.linkedin.com/in/charles-heller-068b53233/" target="_blank" rel="noopener noreferrer" class="fa-brands fa-linkedin"></a>
+               <a href="https://www.instagram.com/ch_46/" target="_blank" rel="noopener noreferrer" class="fa fa-instagram"></a>
+               <a href="https://github.com/CH4692" target="_blank" rel="noopener noreferrer" class="fa fa-github"></a>
             </div>
         </form>
     

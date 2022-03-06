@@ -800,6 +800,7 @@ form .icons a {
 form .action input:focus, form .full textarea:focus,
 form .action input[type="reset"]:hover, form .icons a:hover {
     background: rgba(255, 255, 255, 0.075);
+    color: var(--dominantColor);
 }
 
 @media (max-width: 480px) {
