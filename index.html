@@ -6,25 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous">
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <title>Portfolio Website</title>
 </head>
 <body>
     <section id="home" class="home page">
         <nav>
             <input type="checkbox" id="check">
-            <label for="check" class="checkbtn">
+            <label data-aos="zoom-out-left" for="check" class="checkbtn">
                 <i class="fa-solid fa-bars"></i>
             </label>
-            <label class="logo"><label class="color-text" >P</label>ortfolio Logo</label>  <!--Need to add a Logo here-->
+            <label class="logo" data-aos="fade-up" data-aos-duration="3000"><label class="color-text" >P</label>ortfolio Logo</label>  <!--Need to add a Logo here-->
             <ul>
-                <li><a class="active" href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li data-aos="zoom-out-left"><a class="active" href="#home">Home</a></li>
+                <li data-aos="zoom-out-left"><a href="#about">About</a></li>
+                <li data-aos="zoom-out-left"><a href="#skills">Skills</a></li>
+                <li data-aos="zoom-out-left"><a href="#projects">Projects</a></li>
+                <li data-aos="zoom-out-left"><a href="#contact">Contact</a></li>
             </ul>
         </nav>
-        <div class="text-box">
+        <div data-aos="zoom-in-up" data-aos-easing="linear" class="text-box">
             <div class="text-container">
                 <br>
                 <h3 class="first">Hey there, I'm Charles</h3>
@@ -856,7 +857,7 @@
     </section>
     <section id="about" class="about page">
         <div class="text-box2">
-            <div class="left">
+            <div data-aos="fade-up" data-aos-duration="1500" class="left">
                 <h3>About Me</h3>
                 <p> High motivation, autodidact and passion to </br>
                     coding describes me best. Solving complex </br>
@@ -864,42 +865,42 @@
                     mostly. I like learning new stuff and make  </br>
                     it my own. </p>
             </div>
-            <div class="right">
+            <div data-aos="fade-up" data-aos-duration="1500" class="right">
                 <img src="./me-pic.jpg" alt="">
             </div>
         </div>
     </section>
     <section id="skills" class="skills page">
         <div class="text-box3">
-            <div class="skills-container">
+            <div data-aos="fade-up" data-aos-duration="1500" class="skills-container">
             <h1>My skills</h1>
             <li>
             <h3>HTML5</h3>
-            <span class="bar">
+            <span data-aos="fade-right" data-aos-duration="1500" class="bar">
                  <span class="html"></span>
             </span>
             </li>
             <li>
             <h3>CSS3</h3>
-            <span class="bar">
+            <span data-aos="fade-right" data-aos-duration="1500" class="bar">
                  <span class="css"></span>
             </span>
             </li>
             <li>
             <h3>PYTHON3</h3>
-            <span class="bar">
+            <span data-aos="fade-right" data-aos-duration="1500" class="bar">
                  <span class="python"></span>
             </span>
             </li>
             <li>
             <h3>JAVASCRIPT</h3>
-            <span class="bar">
+            <span data-aos="fade-right" data-aos-duration="1500" class="bar">
                  <span class="javascript"></span>
             </span>
             </li>
             <li>
             <h3>JAVA</h3>
-            <span class="bar">
+            <span data-aos="fade-right" data-aos-duration="1500" class="bar">
                  <span class="java"></span>
             </span>
             </li>
@@ -908,7 +909,7 @@
     </section>
     <section id="projects" class="projects page">
         <div class="text-box4">
-            <div class="projects-container">
+            <div data-aos="fade-up" data-aos-duration="1500" class="projects-container">
                 <div class="project1 card">
                     <img src="./project-1.jpeg" alt="">
                 </div>
@@ -932,10 +933,10 @@
     </section>
     <section id="contact" class="form page">
         <form action="https://formsubmit.co/charles.heller@hotmail.de" method="POST">
-            <div class="title">
+            <div data-aos="fade-up" data-aos-duration="1500" class="title">
                 <h2>SEND A MESSAGE</h2>
             </div>
-            <div class="half">
+            <div data-aos="fade-up" data-aos-duration="1500" class="half">
                 <div class="item">
                     <label for="name">NAME</label>
                     <input type="text" name="name" id="name" required>
@@ -945,24 +946,27 @@
                    <input type="text" name="email" id="email" required>
                </div>
             </div>
-            <div class="full">
+            <div data-aos="fade-up" data-aos-duration="1500" class="full">
                 <label for="message">MESSAGE</label>
                 <textarea name="" name="message" id="message" required></textarea>
             </div>
-            <div class="action">
+            <div data-aos="fade-up" data-aos-duration="1500" class="action">
                 <input type="submit" value="SEND MESSAGE">
                 <input type="reset" value="RESET">
             </div>
-            <div class="icons">                
+            <div data-aos="fade-up" data-aos-duration="1500" class="icons">                
                <a href="https://twitter.com/CharlesHeller46" target="_blank" rel="noopener noreferrer" class="fa fa-twitter"></a>
                <a href="https://www.linkedin.com/in/charles-heller-068b53233/" target="_blank" rel="noopener noreferrer" class="fa-brands fa-linkedin"></a>
                <a href="https://www.instagram.com/ch_46/" target="_blank" rel="noopener noreferrer" class="fa fa-instagram"></a>
                <a href="https://github.com/CH4692" target="_blank" rel="noopener noreferrer" class="fa fa-github"></a>
             </div>
         </form>
-    
-
-    <script src="https://kit.fontawesome.com/64b01fbffc.js" crossorigin="anonymous"></script>
     </section>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+      });
+    </script>
+<script src="https://kit.fontawesome.com/64b01fbffc.js" crossorigin="anonymous"></script>
 </body>
 </html>
