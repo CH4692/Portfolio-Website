@@ -6,7 +6,7 @@
     --font-family: Arial, Helvetica, sans-serif;
     --typewriterSpeed: 5s;
     --blinkSpeed1: 750ms;
-    --blinkSpeed2: 0s;
+    --blinkSpeed2: 750ms;
     --typewriterDelay2: calc(var(--typewriterSpeed) + 6s);
     --typewriterCharacters1: 22;
     --typewriterCharacters2: 26;
@@ -397,15 +397,112 @@ a.active,  a:hover {
 
 /* ------------------------------------------------ About Page ---------------------------*/
 .about {
-    background: rosybrown;
-    
+    background: #111;
+    position: relative;
 }
+
+.text-box2 {
+    position: absolute;
+    background: var(--backgroundColor);
+    box-shadow: 0 0 5px 5px rgba(255, 255, 255, 0.3);
+    height: 50%;
+    z-index: 2;
+    inset: 0 0 0 0;
+    margin: auto auto auto auto;
+    min-height: fit-content;
+    min-width: fit-content;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.text-box2 .left {
+    margin-top: 50px;
+    margin-left: 50px;
+
+}
+
+.text-box2 .left h3 {
+    margin-bottom: 30px;
+    color: var(--textColor);
+    opacity: .9;
+}
+
+.text-box2 .left p {
+    color: var(--textColor);
+    opacity: .9;
+    line-height: 45px;
+}
+
+.text-box2 .right{
+    display: grid;
+    position: relative;
+    border-radius: 50%;
+    max-width: 405px;
+    max-height: 400px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+.text-box2 .right img {
+    height: 100%;
+    width: 100%;
+}
+
+.text-box2 .right::before {
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background: rgba(0,0,0,.8);
+    border-radius: 50%;
+    transition: transform .5s ease-out;
+}
+
+.text-box2 .right::after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background: rgba(0,0,0,.5);
+    border-radius: 50%;
+}
+
+.text-box2 .right:hover:before {
+    transform: translateY(-100%);
+    border-radius: 50%;
+}
+
+
+
+
 
 /* ----- Skills Page -----*/
 .skills {
-    
-    background: skyblue;
+    background: #111;
+    position: relative;
 }
+
+.text-box3 {
+    position: absolute;
+    background: var(--backgroundColor);
+    box-shadow: 0 0 5px 5px rgba(255, 255, 255, 0.3);
+    height: 50%;
+    z-index: 2;
+    inset: 0 0 0 0;
+    margin: auto auto auto auto;
+    min-height: fit-content;
+    min-width: fit-content;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+
 
 /* ------------------------------------------------ Projects Page ------------------------*/
 
