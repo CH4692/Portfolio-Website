@@ -1,5 +1,9 @@
 :root {
     /* Here should be written all variables necessary for the webseite */
+    --dominantColor: rgb(58, 255, 212);
+    --backgroundColor: rgba(17, 17, 17, .6);
+    --textColor: rgb(255, 255, 255);
+    --font-family: Arial, Helvetica, sans-serif;
 }
 
 * {
@@ -11,10 +15,10 @@
 }
 
 
-/* -----Sections -----*/
+/* -------------------------------------------- Sections -------------------------------*/
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--font-family);
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
     height: 100%;
@@ -25,7 +29,7 @@ section {
     scroll-snap-align: start;
 }
 
-/* -------------------------------------------- Home Page Navbar ---------------------------- */
+/* -------------------------------------------- Home Page ---------------------------- */
 
 .home {
     position: relative;
@@ -33,7 +37,7 @@ section {
 
 nav {
     /* background: #0082e6; */
-    background: rgba(17, 17, 17, .6);
+    background: var(--backgroundColor);
     box-shadow: 0 0 5px 5px rgba(255, 255, 255, 0.3);
     height: 80px;
     width: 100%;
@@ -43,29 +47,45 @@ nav {
 
 .text-box {
     position: absolute;
-    background: rgba(17, 17, 17, .6);
+    background: var(--backgroundColor);
     box-shadow: 0 0 5px 5px rgba(255, 255, 255, 0.3);
     width: 50%;
     height: 50%;
     z-index: 2;
     inset: 0 0 0 0;
     margin: auto auto auto auto;
+    min-height: fit-content;
+    min-width: fit-content;
 }
 
 .text-container {
-    margin: 50px 50px;  
+    margin: 50px 50px; 
+    min-height: fit-content;
+    min-width: fit-content;
 }
+
 .text-box .text-container h3{
     color: rgba(255, 255, 255, 0.9);
-    font-size: 50px;
+    font-size: 28px;
     margin-top: 5px;
-    text-shadow: 1px 1px 1px #ffffff;
+}
+
+.text-box .text-container p{
+    color: rgba(255, 255, 255, 0.9);
+    text-align: center;
+    font-size: 25px;
+    margin-top: 120px;
+}
+
+.home .color-text {
+    color: rgb(58, 255, 212);
+    text-shadow: none;
 }
 
 
 
 label.logo {
-    color: rgb(255, 255, 255);
+    color: var(--textColor);
     font-size: 35px;
     line-height: 80px;
     padding: 0 100px;
@@ -84,7 +104,7 @@ nav ul li {
 };
 
 nav ul li a{
-    color: white;
+    color: var(--textColor);
     font-size: 17px;
     padding: 7px 13px;
     border-radius: 3px;
@@ -92,7 +112,7 @@ nav ul li a{
 }
 
 a:link, a:hover, a:visited, a:active {
-    color: white;
+    color: var(--textColor);
     padding: 7px 13px;
     border-radius: 3px;
     text-transform: uppercase;
@@ -106,7 +126,7 @@ a.active,  a:hover {
 
 .checkbtn {
     font-size: 30px;
-    color: white;
+    color: var(--textColor);
     float: right;
     line-height: 80px;
     margin-right: 40px;
@@ -129,59 +149,31 @@ a.active,  a:hover {
         font-size: 16px;
     }
 
-    .text-box h3 {
-        font-size: 35px;
+}
+
+ @media (max-width: 432px) {
+
+    .text-box .text-container h3 {
+        font-size: 24px;
+    }
+
+    .text-box .text-container p{
+        font-size: 21px;
     }
 
 }
 
-@media (max-width: 1135px) {
+@media (max-width: 385px) {
 
-    .text-box h3 {
-        font-size: 35px;
-    }
-
-}
-
-@media (max-width: 855px) {
-
-    .text-box h3 {
-        font-size: 30px;
-    }
-
-}
-
-@media (max-width: 762px) {
-
-    .text-box h3 {
-        font-size: 25px;
-    }
-
-}
-
-@media (max-width: 667px) {
-
-    .text-box h3 {
+    .text-box .text-container h3 {
         font-size: 20px;
     }
 
-}
-
-@media (max-width: 567px) {
-
-    .text-box h3 {
-        font-size: 15px;
-    }
-}
-
-@media (max-width: 481px) {
-
-    .text-box h3 {
-        font-size: 10px;
+    .text-box .text-container p{
+        font-size: 17px;
     }
 
 }
-
 
 
 @media (max-width: 962px) {
@@ -212,7 +204,7 @@ a.active,  a:hover {
     
     a:hover, a.active {
         background: none;
-        color: rgb(58, 255, 212);;
+        color: rgb(58, 255, 212);
     }
 
     #check:checked ~ ul {
@@ -424,9 +416,9 @@ a.active,  a:hover {
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--font-family);
     text-decoration: none;
-    color: white;
+    color: var(--textColor);
 }
 
 form {
@@ -476,7 +468,7 @@ form .half .item input {
     height: 44px;
     background: transparent;
     font-size: 17px;
-    color: white;
+    color: var(--textColor);
 }
 
 form .full {
@@ -492,7 +484,7 @@ form .full textarea {
     width: 100%;
     height: 200px;
     font-size: 17px;
-    color: white;
+    color: var(--textColor);
 }
 
 form .action {
@@ -511,7 +503,7 @@ form .action input {
     outline: 0;
     padding: 0 20px 0 22px;
     margin-right: 10px;
-    color: white;
+    color: var(--textColor);
 }
 
 form .action input[type="submit"] {
