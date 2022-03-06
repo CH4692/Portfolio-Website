@@ -4,6 +4,12 @@
     --backgroundColor: rgba(17, 17, 17, .6);
     --textColor: rgb(255, 255, 255);
     --font-family: Arial, Helvetica, sans-serif;
+    --typewriterSpeed: 5s;
+    --blinkSpeed1: 750ms;
+    --blinkSpeed2: 0s;
+    --typewriterDelay2: calc(var(--typewriterSpeed) + 6s);
+    --typewriterCharacters1: 22;
+    --typewriterCharacters2: 26;
 }
 
 * {
@@ -68,21 +74,61 @@ nav {
     color: rgba(255, 255, 255, 0.9);
     font-size: 28px;
     margin-top: 5px;
+    position: relative;
+    width: fit-content;
+    font-family: monospace;
 }
+/*-------------------- Typewriter 1 ------------------*/
+.text-box .text-container h3::after, .text-box .text-container h3::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 0 0;
+}
+
+.text-box .text-container .first::before {
+    background: rgba(17, 17, 17);
+    animation: typewriter var(--typewriterSpeed) steps(var(--typewriterCharacters1)) 3s forwards;
+}
+
+.text-box .text-container .first::after {
+    width: .125em;
+    background: whitesmoke;
+    animation:
+        typewriter var(--typewriterSpeed) steps(var(--typewriterCharacters1)) 3s forwards,
+        blink1 var(--blinkSpeed1) steps(24) forwards infinite;
+}
+
+
+/*----------------- Typewriter 2 -------------------*/
+
+.text-box .text-container .second::before {
+    background: rgba(17, 17, 17);
+    animation: typewriter var(--typewriterSpeed) steps(var(--typewriterCharacters2)) var(--typewriterDelay2) forwards;
+}
+
+.text-box .text-container .second::after {
+    width: .125em;
+    background: whitesmoke;
+    animation:
+        typewriter var(--typewriterSpeed) steps(var(--typewriterCharacters2)) var(--typewriterDelay2) forwards,
+        blink2 var(--blinkSpeed2) steps(24) forwards infinite;
+}
+
 
 .text-box .text-container p{
     color: rgba(255, 255, 255, 0.9);
     text-align: center;
     font-size: 25px;
     margin-top: 120px;
+    opacity: 0;
+    transform: translateY(3rem);
+    animation: fadeInUp 2s ease calc(var(--typewriterDelay2) + var(--typewriterSpeed) + 1s) forwards;
 }
 
 .home .color-text {
     color: rgb(58, 255, 212);
     text-shadow: none;
 }
-
-
 
 label.logo {
     color: var(--textColor);
@@ -137,6 +183,35 @@ a.active,  a:hover {
 #check {
     display: none;
 }
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes typewriter {
+   to {
+       left: 100%;
+       
+   }
+}
+
+@keyframes blink1 {
+
+   to {
+       background: transparent;
+   }
+}
+
+@keyframes blink2 {
+
+    to {
+        background: transparent;
+    }
+ }
 
 
 @media (max-width: 962px) {
@@ -411,7 +486,6 @@ a.active,  a:hover {
 
 /* ------------------------------------------ Form Page -----------------------*/
 .form {
-    height: 100%;
     background: url(./img1.png);
     background-repeat: no-repeat;
     background-size: cover;
