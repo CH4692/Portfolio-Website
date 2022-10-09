@@ -28,6 +28,7 @@ chrome-user-data
 /node_modules
 /.pnp
 .pnp.js
+package.json
 
 # testing
 /coverage
