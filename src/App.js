@@ -7,7 +7,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Connection to Hostinger was success !!!
+          Hello Guys my name is Charles!
         </p>
         <a
           className="App-link"
