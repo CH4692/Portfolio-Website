@@ -31,10 +31,11 @@ jobs:
         env:
           REPO: self
           BRANCH: production
-          FOLDER: /
+          FOLDER: build
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           MESSAGE: "Build: ({sha}) {msg}" # The commit message
   Test:
+    needs: build
     runs-on: ubuntu-latest
     strategy:
       matrix:
