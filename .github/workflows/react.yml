@@ -1,6 +1,5 @@
 name: React CI/CD
 # This is just the nane you can name it as you want.
-
 on: # These are all the events which this workflow will trigger for
   push:
     branches: [ master ]
@@ -13,7 +12,7 @@ jobs:
     name: Build and Push
     steps:
       - name: git-checkout
-      - uses: actions/checkout@v3
+        uses: actions/checkout@v3
 
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v3
