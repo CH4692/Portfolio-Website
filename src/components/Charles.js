@@ -2,7 +2,7 @@ import React from 'react'
 
 const Charles = () => {
   return (
-    <div>Charles</div>
+    <div>You are on the Charles Page</div>
   )
 }
 

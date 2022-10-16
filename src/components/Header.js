@@ -17,7 +17,7 @@ import { Link } from 'react-router-dom';
 
 const drawerWidth = 240;
 const navItems = ['Home', 'Charles', 'Projects', 'Contact'];
-const linkRemover = { textDecoration: 'none' }
+const linkRemover = { textDecoration: 'none', width: '100%' }
 
 function Header(props) {
     const { window } = props;
@@ -37,11 +37,11 @@ function Header(props) {
                 {navItems.map((item) => (
                     <ListItem key={item} disablePadding>
                         <ListItemButton sx={{ textAlign: 'center' }}>
-                            <ListItemText>
-                                <Link style={linkRemover} key={item} to={`/${item.toLowerCase()}`}>
+                            <Link style={linkRemover} key={item} to={`/${item.toLowerCase()}`}>
+                                <ListItemText sx={{color: 'black'}}>
                                     {item}
-                                </Link>
-                            </ListItemText>
+                                </ListItemText>
+                            </Link>
                         </ListItemButton>
                     </ListItem>
                 ))}
@@ -69,7 +69,7 @@ function Header(props) {
                         component="div"
                         sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
                     >
-                        MUI
+                        CH
                     </Typography>
                     <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
                         {navItems.map((item) => (
