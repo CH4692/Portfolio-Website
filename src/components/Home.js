@@ -1,10 +1,9 @@
+import { Typography } from '@mui/material'
 import React from 'react'
 
 const Home = () => {
   return (
-    <>
-      <div>You are on the Home Page</div>
-    </>
+    <Typography variant='p'>You are on the Home Page</Typography>
   )
 }
 

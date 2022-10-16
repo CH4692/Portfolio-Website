@@ -1,8 +1,9 @@
+import { Typography } from '@mui/material'
 import React from 'react'
 
 const Charles = () => {
   return (
-    <div>You are on the Charles Page</div>
+    <Typography variant='p'>You are on the Charles Page</Typography>
   )
 }
 

@@ -1,10 +1,9 @@
+import { Typography } from '@mui/material'
 import React from 'react'
 
 const Projects = () => {
   return (
-    <>
-      <div>You are on the Projects Page</div>
-    </>
+      <Typography variant='p'>You are on the Projects Page</Typography>
   )
 }
 
