@@ -42,8 +42,8 @@ const Leftbar = () => {
     <Box
       flex={0.25}
       p={2}
-      sx={{ display: { xs: 'none', sm: 'flex' }, height: '88vh', justifyContent: 'center', alignItems: 'flex-end'}}>
-      <Stack spacing={2} mb={'50px'} >
+      sx={{ display: { xs: 'none', sm: 'flex' }, height: '88vh', justifyContent: 'center', alignItems: 'flex-end' }}>
+      <Stack spacing={2} mb={'50px'} sx={{position: 'fixed'}}>
         <IconButton sx={hoverIcons}>
           <StyledTooltip title='Github' placement='right-end' disableFocusListener TransitionComponent={Fade} TransitionProps={{ timeout: 600 }}>
             <GitHub sx={hoverIconsChangeColor} color='primary' fontSize='large' />
