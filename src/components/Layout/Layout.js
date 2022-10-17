@@ -9,7 +9,7 @@ const Layout = (props) => {
         <div>
             <Box>
                 <Navbar/>
-                <Stack direction='row' spacing={2} justifyContent='space-between'>
+                <Stack direction='row' justifyContent='space-between'>
                     <Leftbar />
                     {props.children}
                     <Rightbar />
