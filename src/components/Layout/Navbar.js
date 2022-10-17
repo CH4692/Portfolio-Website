@@ -12,10 +12,22 @@ const StyledToolbar = styled(Toolbar)({
 
 const StyledNavListItem = styled(Button)({
     color: 'whitesmoke',
+    transition: '0.25s ease-in-out',
     margin: '5px',
     "&:hover": {
-        backgroundColor: "#2196f3"
+        backgroundColor: "#2196f3",
+        transform: 'scale(1.07)'
     }
+    // THIS MAYBE NEEDS TO BE ADDED FOR MOBILE DEVICES -> TRY OUT AT RELEASE
+    // ,
+    // "&:focus": {
+    //     backgroundColor: "#2196f3",
+    //     transform: 'scale(1.07)'
+    // },
+    // "&:active": {
+    //     backgroundColor: "#2196f3",
+    //     transform: 'scale(1.07)'
+    // }
 })
 
 const StyledLogo = styled(Button)({
