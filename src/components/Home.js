@@ -2,6 +2,7 @@ import { Button, styled, Typography } from '@mui/material'
 import { Box } from '@mui/system'
 import React from 'react'
 import Skills from './Layout/Skills'
+import './Home.css'
 
 const StyledButton = styled(Button)({
   width: '300px',
@@ -13,7 +14,7 @@ const StyledButton = styled(Button)({
 const Home = () => {
   return (
     <>
-      <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', height: '80%', width: '100%', pl: '8em', pt: '7em' }}>
+      <Box className='landing-page' sx={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', height: '80%', width: '100%', pl: '8em', pt: '7em' }}>
         <Typography variant='h6' color={'primary.dark'} fontWeight={'bold'}>Hi, my name is</Typography>
         <Typography variant='h2' color='primary.light' fontWeight={'bold'}>Charles Heller</Typography>
         <Typography variant='h2' color={'primary.dark'} mb='20px' fontWeight={'bold'}>Frontend-Backend Developer</Typography>

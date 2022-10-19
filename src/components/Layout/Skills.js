@@ -2,20 +2,27 @@ import { Divider, Typography } from '@mui/material'
 import { Box, Stack } from '@mui/system'
 import { FaReact, FaJava, FaHtml5, FaCss3, FaPython, FaGithub, FaBitbucket, FaDocker, FaConfluence, FaNode, FaAws, FaGit } from 'react-icons/fa'
 import { SiJavascript, SiJirasoftware, SiCplusplus, SiSelenium } from 'react-icons/si'
-import React from 'react'
+import './Skills.css'
+import React, { useState } from 'react'
 
-const iconSize = '40px'
 const Skills = () => {
+    const [rollout, setRollout] = useState('')
+
+    const toggleScatter = () => {
+        setRollout((prev) => {
+            return prev ? '' : 'rollout'
+        })
+    }
+
+    const iconColor = { color: '#4dabf5' }
+
     return (
         <>
-            <Box display={'flex'}>
+            <Box className='about-skills' display={'flex'}>
                 <Box flex={1} p={2}>
                     <Divider >
                         <Stack direction='row' gap={1}>
                             <Typography variant='h6' color={'primary.dark'}>
-                                About
-                            </Typography>
-                            <Typography variant='h6'>
                                 Charles
                             </Typography>
                         </Stack>
@@ -32,25 +39,27 @@ const Skills = () => {
 
                     </Typography>
                 </Box>
-                <Box flex={1}  p={2} display={'flex'} justifyContent={'center'} >
-                    <Box mt={'70px'}  width={'300px'} height={'300px'} borderRadius={100} position={'relative'}>
-                        < FaReact style={{ fontSize: iconSize, position: 'absolute', top: '50%', left:'0', transform: 'translate(-50%, -50%)'}} />
-                        < FaJava style={{ fontSize: iconSize, position: 'absolute', top: '50%', left:'100%', transform: 'translate(-50%, -50%)'}} />
-                        < SiJavascript style={{ fontSize: iconSize, position: 'absolute', top: '0', left:'50%', transform: 'translate(-50%, -50%)' }} />
-                        < FaHtml5 style={{ fontSize: iconSize, position: 'absolute', top: '100%', left:'50%', transform: 'translate(-50%, -50%)' }} />
-                        < FaCss3 style={{ fontSize: iconSize, position: 'absolute', top: '20%', left:'90%', transform: 'translate(-50%, -50%)' }} />
-                        < FaPython style={{ fontSize: iconSize, position: 'absolute', top: '85%', left:'85%', transform: 'translate(-50%, -50%)' }} />
-                        < FaGithub style={{ fontSize: iconSize, position: 'absolute', top: '15%', left:'15%', transform: 'translate(-50%, -50%)' }} />
-                        < FaBitbucket style={{ fontSize: iconSize, position: 'absolute', top: '85%', left:'15%', transform: 'translate(-50%, -50%)' }} />
-                        < SiJirasoftware style={{ fontSize: iconSize, position: 'absolute', top: '50%', left:'20%', transform: 'translate(-50%, -50%)' }} />
-                        < FaDocker style={{ fontSize: iconSize, position: 'absolute', top: '20%', left:'50%', transform: 'translate(-50%, -50%)' }} />
-                        < FaConfluence style={{ fontSize: iconSize, position: 'absolute', top: '30%', left:'30%', transform: 'translate(-50%, -50%)' }} />
-                        < FaNode style={{ fontSize: iconSize, position: 'absolute', top: '30%', left:'70%', transform: 'translate(-50%, -50%)' }} />
-                        < SiCplusplus style={{ fontSize: iconSize, position: 'absolute', top: '70%', left:'30%', transform: 'translate(-50%, -50%)' }} />
-                        < SiSelenium style={{ fontSize: iconSize, position: 'absolute', top: '75%', left:'50%', transform: 'translate(-50%, -50%)' }} />
-                        < FaAws style={{ fontSize: iconSize, position: 'absolute', top: '50%', left:'80%', transform: 'translate(-50%, -50%)' }} />
-                        < FaGit style={{ fontSize: iconSize, position: 'absolute', top: '70%', left:'70%', transform: 'translate(-50%, -50%)' }} />
-                        <Typography color={'primary.dark'} fontWeight={'bold'} sx={{ fontSize: '20px', position: 'absolute', top: '50%', left:'50%', transform: 'translate(-50%, -50%)'}} variant='p'>My Skills</Typography>
+                <Box flex={1} p={2} display={'flex'} justifyContent={'center'} >
+                    <Box mt={'70px'} width={'300px'} height={'300px'} borderRadius={100} position={'relative'}>
+                        < FaReact className={`icon-all react-icon ${rollout}`} style={iconColor} />
+                        < FaJava className={`icon-all java-icon ${rollout}`} style={iconColor} />
+                        < SiJavascript className={`icon-all js-icon ${rollout}`} style={iconColor} />
+                        < FaHtml5 className={`icon-all html-icon ${rollout}`} style={iconColor} />
+                        < FaCss3 className={`icon-all css-icon ${rollout}`} style={iconColor} />
+                        < FaPython className={`icon-all python-icon ${rollout}`} style={iconColor} />
+                        < FaGithub className={`icon-all github-icon ${rollout}`} style={iconColor} />
+                        < FaBitbucket className={`icon-all bitbucket-icon ${rollout}`} style={iconColor} />
+                        < SiJirasoftware className={`icon-all jira-icon ${rollout}`} style={iconColor} />
+                        < FaDocker className={`icon-all docker-icon ${rollout}`} style={iconColor} />
+                        < FaConfluence className={`icon-all confluence-icon ${rollout}`} style={iconColor} />
+                        < FaNode className={`icon-all node-icon ${rollout}`} style={iconColor} />
+                        < SiCplusplus className={`icon-all cplusplus-icon ${rollout}`} style={iconColor} />
+                        < SiSelenium className={`icon-all selenium-icon ${rollout}`} style={iconColor} />
+                        < FaAws className={`icon-all aws-icon ${rollout}`} style={iconColor} />
+                        < FaGit className={`icon-all git-icon ${rollout}`} style={iconColor} />
+                        <Box className='myskill-text' color={'primary.dark'} fontWeight={'bold'}>
+                            <Typography onClick={toggleScatter} className='myText' variant='p'>My Skills</Typography>
+                        </Box>
                     </Box>
                 </Box>
             </Box>

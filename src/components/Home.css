@@ -1,0 +1,8 @@
+/* Mobile Responsive */
+
+@media only screen and (max-width:768px) {
+    .landing-page {
+        flex-direction: column;
+        width: 100%;
+    }
+}
