@@ -1,9 +1,9 @@
 import './App.css';
 import { Routes, Route } from 'react-router-dom'
-import Projects from './components/Projects';
-import Charles from './components/Charles';
-import Contact from './components/Contact';
-import Home from './components/Home';
+import Projects from './components/Pages/Projects';
+import Charles from './components/Pages/Charles';
+import Contact from './components/Pages/Contact';
+import Home from './components/Pages/Home';
 import Layout from './components/Layout/Layout';
 import Feed from './components/Layout/Feed';
 

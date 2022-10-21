@@ -1,0 +1,40 @@
+.projectContainer {
+    justify-content: center;
+    gap: 200px;
+}
+
+.card {
+    margin-bottom: 200px;
+}
+
+
+
+.card-container2 {
+    margin-top: 350px;
+}
+
+@media only screen and (max-width:768px) {
+    .projectContainer {
+        flex-direction: column;
+        width: 100%;
+        gap: 0px;
+    }
+
+    .card {
+        margin-bottom: 50px;
+    }
+
+    .card-container1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card-container2 {
+        margin-top: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+}

@@ -119,6 +119,10 @@
     cursor: pointer;
 }
 
+.about-skills {
+    white-space: normal;
+}
+
 /* For Mobile */
 @media(hover: hover) and (pointer: fine) {
     .myText:hover {
@@ -130,6 +134,7 @@
 @media only screen and (max-width:768px) {
     .about-skills {
         flex-direction: column;
+        justify-content: center;
         width: 100%;
     }
 }
