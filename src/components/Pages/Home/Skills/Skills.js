@@ -37,7 +37,7 @@ const Skills = () => {
                 </Box>
             </Box>
             <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: '100%', mt: '70px' }}>
-                <Link to={'/projects'} style={{ textDecoration: 'none' }}>
+                <Link to={'/charles'} style={{ textDecoration: 'none' }}>
                     <StyledButton sx={{ backgroundColor: '#03a9f4', '&:hover': { backgroundColor: '#0288d1' } }} size='large' variant="contained" endIcon={< InfoOutlinedIcon />}>
                         More Details
                     </StyledButton>
