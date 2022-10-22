@@ -2,6 +2,7 @@ import { Box, Typography } from '@mui/material'
 import React from 'react'
 import { FaReact, FaJava, FaHtml5, FaCss3, FaPython, FaGithub, FaBitbucket, FaDocker, FaConfluence, FaNode, FaAws, FaGit } from 'react-icons/fa'
 import { SiJavascript, SiJirasoftware, SiCplusplus, SiSelenium } from 'react-icons/si'
+import { StyledSkillsAnimator, StyledSkilltTextContainer } from './SkillsStyled'
 
 const SkillsAnimator = (props) => {
     return (
@@ -22,8 +23,8 @@ const SkillsAnimator = (props) => {
             < SiSelenium className={`icon-all selenium-icon ${props.rollout}`} style={props.iconColor} />
             < FaAws className={`icon-all aws-icon ${props.rollout}`} style={props.iconColor} />
             < FaGit className={`icon-all git-icon ${props.rollout}`} style={props.iconColor} />
-            <Box className='myskill-text' color={'primary.dark'} fontWeight={'bold'}>
-                <Typography onClick={props.toggleScatter} className='myText' variant='p'>My Skills</Typography>
+            <Box sx={StyledSkilltTextContainer} color={'primary.dark'} fontWeight={'bold'}>
+                <Typography onClick={props.toggleScatter} sx={StyledSkillsAnimator} variant='p'>My Skills</Typography>
             </Box>
         </Box>
     )

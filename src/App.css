@@ -1,0 +1,9 @@
+.coming-soon {
+    background: rgb(33, 150, 243);
+    background: -moz-radial-gradient(circle, rgba(33, 150, 243, 1) 20%, rgba(13, 71, 161, 1) 80%);
+    background: -webkit-radial-gradient(circle, rgba(33, 150, 243, 1) 20%, rgba(13, 71, 161, 1) 80%);
+    background: radial-gradient(circle, rgba(33, 150, 243, 1) 20%, rgba(13, 71, 161, 1) 80%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#2196f3", endColorstr="#0d47a1", GradientType=1);
+    border-radius: 40px;
+}
+

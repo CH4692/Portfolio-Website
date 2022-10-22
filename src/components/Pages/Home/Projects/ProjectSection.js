@@ -2,9 +2,9 @@ import { Box, Divider, Typography } from '@mui/material'
 import './ProjectSection.css'
 import React from 'react'
 import ProjectCard from './ProjectCard'
-import mockup1 from '../../images/mockup-1.jpg'
+import mockup1 from '../../../../images/mockup-1.jpg'
 
-const ProjectsSection = () => {
+const ProjectSection = () => {
     return (
         <>
             <Box display={'flex'} sx={{ pt: '11em' }}>
@@ -17,7 +17,7 @@ const ProjectsSection = () => {
                 </Box>
             </Box>
             <Box width='100%' pt='4em' display={'flex'} className='projectContainer'>
-                <Box className='card-container1'>
+                <Box  className='card-container1'>
                     <ProjectCard className='card' title='Project 1' image={mockup1}>
                         This impressive paella is a perfect party dish and a fun meal to cook
                         together with your guests. Add 1 cup of frozen peas along with the mussels,
@@ -46,4 +46,4 @@ const ProjectsSection = () => {
     )
 }
 
-export default ProjectsSection
+export default ProjectSection

@@ -1,11 +1,13 @@
-import { Button, Divider, Typography } from '@mui/material'
+import { Divider, Typography } from '@mui/material'
 import { Box } from '@mui/system'
 import './Skills.css'
 import React, { useState } from 'react'
 import ControlledAccordions from './Accordion'
 import SkillsAnimator from './SkillsAnimator'
 import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
-import { StyledButton } from '../Pages/Home'
+import { StyledButton } from '../HomeStyles'
+import { Link } from 'react-router-dom'
+import { StyledAboutSkills } from './SkillsStyled'
 
 
 const Skills = () => {
@@ -21,7 +23,7 @@ const Skills = () => {
 
     return (
         <>
-            <Box className='about-skills' display={'flex'}>
+            <Box sx={StyledAboutSkills} display={'flex'}>
                 <Box flex={1} p={2}>
                     <Divider >
                         <Typography variant='h5' fontWeight={'bold'} color={'primary.dark'}>
@@ -34,10 +36,12 @@ const Skills = () => {
                     <SkillsAnimator rollout={rollout} toggleScatter={toggleScatter} iconColor={iconColor} />
                 </Box>
             </Box>
-            <Box sx={{display:'flex', alignItems: 'center', justifyContent: 'center', width:'100%', mt:'70px'}}>
-                <StyledButton size='large' variant="outlined" endIcon={< InfoOutlinedIcon />}>
-                    For more Info
-                </StyledButton>
+            <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: '100%', mt: '70px' }}>
+                <Link to={'/projects'} style={{ textDecoration: 'none' }}>
+                    <StyledButton sx={{ backgroundColor: '#03a9f4', '&:hover': { backgroundColor: '#0288d1' } }} size='large' variant="contained" endIcon={< InfoOutlinedIcon />}>
+                        More Details
+                    </StyledButton>
+                </Link>
             </Box>
         </>
     )

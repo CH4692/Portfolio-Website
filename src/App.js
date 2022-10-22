@@ -3,9 +3,10 @@ import { Routes, Route } from 'react-router-dom'
 import Projects from './components/Pages/Projects';
 import Charles from './components/Pages/Charles';
 import Contact from './components/Pages/Contact';
-import Home from './components/Pages/Home';
 import Layout from './components/Layout/Layout';
 import Feed from './components/Layout/Feed';
+import Home from './components/Pages/Home/Home';
+
 
 
 function App() {
