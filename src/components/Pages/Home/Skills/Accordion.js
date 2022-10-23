@@ -51,8 +51,8 @@ export default function ControlledAccordions() {
                 </AccordionSummary>
                 <AccordionDetails>
                     <Typography sx={{color: '#fff'}}>
-                        I place great value and focus on design and security in the frontend and <br />
-                        a trustworthy and smart administration as well as maintenance in the backend. <br /><br />
+                        I place great value and focus on design and security in the frontend and<br />
+                        a trustworthy and smart administration as well as maintenance in the backend.<br /><br />
                     </Typography>
                 </AccordionDetails>
             </Accordion>
