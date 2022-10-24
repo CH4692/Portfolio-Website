@@ -90,7 +90,7 @@ export default function ControlledAccordions() {
                 </AccordionSummary>
                 <AccordionDetails>
                     <Typography sx={{color: '#fff'}}>
-                        I build mobile Apps 
+                        I build mobile Apps and Native Apps.
                     </Typography>
                 </AccordionDetails>
             </Accordion>
