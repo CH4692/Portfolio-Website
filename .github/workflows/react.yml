@@ -4,8 +4,6 @@ name: React CI/CD
 on: # These are all the events which this workflow will trigger for
   push:
     branches: [ master ]
-  pull_request:
-    branches: [ master ]
 
 jobs:
   build:
