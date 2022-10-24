@@ -53,7 +53,7 @@ const Navbar = () => {
             <StyledToolbar sx={{display: 'flex'}}>
                 <Link to={'/home'} style={{ textDecoration: 'none'}}>
                     <StyledLogo sx={{ display: { xs: 'none', sm: 'block' }}}>
-                        <Typography variant='h4'>CH</Typography>
+                        <Typography sx={{fontFamily: 'Lemon, cursive'}} variant='h4'>CH</Typography>
                     </StyledLogo>
                     <IconButton sx={{ display: { xs: 'block', sm: 'none' } }}>
                         <StyledHomeIcon  />
