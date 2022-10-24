@@ -1,0 +1,89 @@
+.icon-all {
+    font-size: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 1s ease-in-out;
+}
+
+/* style={{ fontSize: iconSize, position: 'absolute', top: '50%', left:'50%', transform: 'translate(-50%, -50%)'}} */
+.react-icon.rollout {
+    top: 50%;
+    left: 0%;
+}
+
+.java-icon.rollout {
+    top: 50%;
+    left: 100%;
+}
+
+.js-icon.rollout {
+    top: 0;
+    left: 50%;
+}
+
+.html-icon.rollout {
+    top: 100%;
+    left: 50%;
+}
+
+.python-icon.rollout {
+    top: 85%;
+    left: 85%;
+}
+
+.css-icon.rollout {
+    top: 20%;
+    left: 90%;
+}
+
+.github-icon.rollout {
+    top: 15%;
+    left: 15%;
+}
+
+.bitbucket-icon.rollout {
+    top: 85%;
+    left: 15%;
+}
+
+.jira-icon.rollout {
+    top: 50%;
+    left: 20%;
+}
+
+.docker-icon.rollout {
+    top: 20%;
+    left: 50%;
+}
+
+.confluence-icon.rollout {
+    top: 30%;
+    left: 30%;
+}
+
+.node-icon.rollout {
+    top: 30%;
+    left: 70%;
+}
+
+.cplusplus-icon.rollout {
+    top: 70%;
+    left: 30%;
+}
+
+.selenium-icon.rollout {
+    top: 75%;
+    left: 50%;
+}
+
+.aws-icon.rollout {
+    top: 50%;
+    left: 80%;
+}
+
+.git-icon.rollout {
+    top: 70%;
+    left: 70%;
+}

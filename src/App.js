@@ -1,24 +1,29 @@
-import logo from './logo.svg';
 import './App.css';
+import { Routes, Route } from 'react-router-dom'
+import Projects from './components/Pages/Projects';
+import Charles from './components/Pages/Charles';
+import Contact from './components/Pages/Contact';
+import Layout from './components/Layout/Layout';
+import Feed from './components/Layout/Feed';
+import Home from './components/Pages/Home/Home';
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Hello Guys my name is Charles!
-        </p>
-        <a
-          className="App-link"
-          href="https://de.linkedin.com/in/charles-heller-068b53233"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Check out my LinkedIn Page.
-        </a>
-      </header>
-    </div>
+    <>
+      <Layout>
+        <Feed>
+          <Routes>
+            <Route index path='*' element={<Home />} />
+            <Route path='/home' element={<Home />} />
+            <Route path='/charles' element={<Charles />} />
+            <Route path='/projects' element={<Projects />} />
+            <Route path='/contact' element={<Contact />} />
+          </Routes>
+        </Feed>
+      </Layout>
+    </>
   );
 }
 
