@@ -52,12 +52,9 @@ const Navbar = () => {
         <AppBar position='sticky'>
             <StyledToolbar sx={{display: 'flex'}}>
                 <Link to={'/home'} style={{ textDecoration: 'none'}}>
-                    <StyledLogo sx={{ display: { xs: 'none', sm: 'block' }}}>
+                    <StyledLogo >
                         <Typography sx={{fontFamily: 'Lemon, cursive'}} variant='h4'>CH</Typography>
-                    </StyledLogo>
-                    <IconButton sx={{ display: { xs: 'block', sm: 'none' } }}>
-                        <StyledHomeIcon  />
-                    </IconButton>
+                    </StyledLogo>               
                 </Link>
                 <Toolbar sx={{ display: { xs: 'none', sm: 'flex' } }}>
                     <Link to={'/charles'} style={{ textDecoration: 'none' }}>
