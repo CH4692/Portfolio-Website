@@ -1,4 +1,4 @@
-import { ContactPage, EmojiPeople, Home, HomeRepairService } from '@mui/icons-material'
+import { ContactPage, EmojiPeople, HomeRepairService } from '@mui/icons-material'
 import { AppBar, Toolbar, styled, Typography, Button, IconButton } from '@mui/material'
 import MenuIcon from '@mui/icons-material/Menu';
 import React from 'react'
@@ -32,7 +32,7 @@ const StyledNavListItem = styled(Button)({
 
 const StyledLogo = styled(Button)({
     color: 'whitesmoke',
-    
+
 })
 
 const StyledMenuIcon = styled(MenuIcon)({
@@ -41,25 +41,21 @@ const StyledMenuIcon = styled(MenuIcon)({
     borderRadius: '10px'
 })
 
-const StyledHomeIcon = styled(Home)({
-    color: 'whitesmoke',
-    margin: '5px',
-    borderRadius: '10px'
-})
 
 const Navbar = () => {
     return (
         <AppBar position='sticky'>
-            <StyledToolbar sx={{display: 'flex'}}>
-                <Link to={'/home'} style={{ textDecoration: 'none'}}>
+            <StyledToolbar sx={{ display: 'flex' }}>
+                <Link to={'/home'} style={{ textDecoration: 'none' }}>
                     <StyledLogo >
-                        <Typography sx={{fontFamily: 'Lemon, cursive'}} variant='h4'>CH</Typography>
-                    </StyledLogo>               
+                        <Typography sx={{ fontFamily: 'Lemon, cursive' }} variant='h4'>CH</Typography>
+                    </StyledLogo>
                 </Link>
                 <Toolbar sx={{ display: { xs: 'none', sm: 'flex' } }}>
                     <Link to={'/charles'} style={{ textDecoration: 'none' }}>
                         <StyledNavListItem variant="Text" sx endIcon={<EmojiPeople />}>Charles</StyledNavListItem>
                     </Link>
+
                     <Link to={'/projects'} style={{ textDecoration: 'none' }}>
                         <StyledNavListItem variant="Text" sx endIcon={<HomeRepairService />}>Projects</StyledNavListItem>
                     </Link>
