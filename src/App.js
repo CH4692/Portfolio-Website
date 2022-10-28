@@ -30,11 +30,11 @@ function App() {
         <Layout>
           <Feed>
             <Routes>
-              <Route index path='/*' element={<Home />} />
               <Route path='/home' element={<Home />} />
               <Route path='/charles' element={<Charles />} />
               <Route path='/projects' element={<Projects />} />
               <Route path='/contact' element={<Contact />} />
+              <Route index path='/*' element={<Home />} />
             </Routes>
           </Feed>
         </Layout>
