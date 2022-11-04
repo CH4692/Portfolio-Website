@@ -14,6 +14,7 @@ const ContactCards = () => {
                 window.tidioChatApi.open();
             });
         })();
+       
     }, [])
 
     return (

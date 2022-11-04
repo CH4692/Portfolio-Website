@@ -6,6 +6,7 @@ import ContactSection from './Contact/ContactSection'
 import ProjectSection from './Projects/ProjectSection'
 import Skills from './Skills/Skills'
 import { StyledHomeContainerOne, StyledHomeContainerTwo, StyledButton, StyledHomeButtonContainer, StyledUpperText, StyledLowerText } from './HomeStyles'
+import { Link } from 'react-router-dom'
 
 
 const Home = () => {
@@ -27,7 +28,9 @@ const Home = () => {
             ad minim veniam, quis nostrud exercitation ullamco laboris <br />
           </Typography>
           <Box sx={StyledHomeButtonContainer} display={'flex'} >
+          <Link to={'/projects'} style={{ textDecoration: 'none' }}>
             <StyledButton size='large' variant="outlined" >Check out my Projects!</StyledButton>
+          </Link>
           </Box>
         </Box>
       </Box>

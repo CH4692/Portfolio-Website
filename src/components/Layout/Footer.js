@@ -6,12 +6,11 @@ const Footer = () => {
     return (
         <>
             <Divider />
-            <Box height={'5em'} display={'flex'} justifyContent={'space-between'} alignItems={'center'}>
+            <Box sx={{mb: {xs: '6rem', md: '0rem'}}} height={'5em'} display={'flex'} justifyContent={'space-between'} alignItems={'center'}>
                 <Box>
                     <Typography color={'primary'} variant='p'> © 2022 Mady by Charles Heller.</Typography>
                 </Box>
                 <Box>
-                    
                 </Box>
             </Box>
         </>
