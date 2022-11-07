@@ -20,7 +20,6 @@ const iconLeftDown = {
 }
 
 const comingSoon = {
-    background: 'rgb(33, 150, 243)',
     background: 'radial-gradient(circle, rgba(33, 150, 243, 1) 20%, rgba(13, 71, 161, 1) 80%)',
     borderRadius: '40px',
     height: '90vh',
