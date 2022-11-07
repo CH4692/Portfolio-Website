@@ -25,7 +25,7 @@ const MobileNavbar = () => {
   const activeIcon = {
     bottom: '2.5rem',
     borderRadius: '100%',
-    backgroundColor: 'white',
+    backgroundColor: 'primary.contrastText',
     height: '75px',
     maxWidth: '70px',
     boxShadow: '-5px -28px 16px -11px rgba(0,0,0,0.0.7)',
@@ -55,7 +55,7 @@ const MobileNavbar = () => {
   return (
     <>
       <Box sx={styledBottomNav}>
-        <BottomNavigation sx={{ backgroundColor: 'white', mr: '0.5rem', ml: '0.5rem', boxShadow: '0px -2px 15px -6px #000000' }}
+        <BottomNavigation sx={{ backgroundColor: 'primary.contrastText', mr: '0.5rem', ml: '0.5rem', boxShadow: '0px -2px 15px -6px #000000' }}
           showLabels
           value={value}
           onChange={(event, newValue) => {

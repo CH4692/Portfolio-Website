@@ -8,28 +8,30 @@ export const StyledHomeContainerOne = {
 }
 
 export const StyledHomeContainerTwo = {
-    pt: {xs:'3em', md: '11em'},
-    pl: {xs: '1em', md: '8em'},
-    height: '80vh',
+    pt: {xs:'3em', md: '9em'},
+    pl: {xs: '0em', md: '3em', lg: '11em'},
+    height: '90vh',
 }
 
-export const StyledButton = styled(Button)({
-    width: '300px',
+export const StyledButton = styled(Button)( ({theme}) => ({
+    width: '100%',
     height: '50px',
     borderRadius: '5px',
     color: '#fff',
     marginTop: '4rem',
-    backgroundColor: '#03a9f4',
+    backgroundColor: theme.palette.primary.main,
     '&:hover': { 
-        backgroundColor: '#0288d1'
+        backgroundColor: theme.palette.primary.dark
   }
-})
+}))
 
 export const StyledHomeButtonContainer = {
     mb: '30px',
     mt: '60px',
     width: '100%',
-    justifyContent: {xs: 'center', md: 'flex-start'}
+    justifyContent: {xs: 'center', md: 'flex-start'},
+    flexDirection: {xs: 'column', md:'row'},
+
 }
 
 export const StyledUpperText = {
@@ -41,3 +43,4 @@ export const StyledLowerText = {
     marginTop: {xs: '0.5rem', md: '0rem'},
     marginBottom: {xs: '4rem', md: '0rem'}
 }
+

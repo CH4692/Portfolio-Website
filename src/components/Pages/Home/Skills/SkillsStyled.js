@@ -10,7 +10,7 @@ export const StyledSkillsAnimator = {
     '&:hover &:active': {transform: { xs: 'translateY(-3px) scale(1.04)', md: ''}},
     width: '100%',
     height: '100%',
-    backgroundColor: '#1769aa',
+    backgroundColor: 'primary.dark',
     borderRadius: 'inherit',
     display: 'flex',
     justifyContent: 'center',

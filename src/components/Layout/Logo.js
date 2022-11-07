@@ -2,10 +2,10 @@ import { Box, Typography } from '@mui/material'
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const StyledLogoIcon = {
-    color: 'whitesmoke',
+const StyledLogoIcon =  {
+    color: 'primary.contrastText',
     borderRadius: '100%',
-    backgroundColor: '#2196f3',
+    backgroundColor: 'primary.main',
     width: '60px',
     height: '60px',
     marginTop: '22px',

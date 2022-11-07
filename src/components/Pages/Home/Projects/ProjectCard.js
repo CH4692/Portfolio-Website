@@ -14,7 +14,7 @@ import { SiJavascript } from 'react-icons/si';
 export default function ProjectCard(props) {
 
   return (
-    <Card className={props.className} sx={{ maxWidth: 400, color: '#2196f3', bgcolor: '#e3f2fd' }}>
+    <Card className={props.className} sx={{ maxWidth: 400, color: 'primary.contrastText', bgcolor: 'primary.light' }}>
       <CardHeader
         title={props.title}
       />
@@ -25,25 +25,24 @@ export default function ProjectCard(props) {
         alt={props.alt}
       />
       <CardContent >
-        <Typography variant="body2" color="primary">
+        <Typography variant="body2" sx={{color: 'primary.contrastText'}}>
           {props.children}
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
-        <IconButton color={'primary'} aria-label="">
-          {/* Icons come here */}
+        <IconButton sx={{color: 'primary.contrastText'}} aria-label="">
           < FaReact />
         </IconButton>
-        <IconButton color={'primary'}>
+        <IconButton sx={{color: 'primary.contrastText'}}>
           < SiJavascript />
         </IconButton >
-        <IconButton color={'primary'}>
+        <IconButton sx={{color: 'primary.contrastText'}}>
           < FaHtml5 />
         </IconButton>
-        <IconButton color={'primary'}>
+        <IconButton sx={{color: 'primary.contrastText'}}>
           < FaCss3 />
         </IconButton>
-        <IconButton color={'primary'}>
+        <IconButton sx={{color: 'primary.contrastText'}}>
           < FaPython />
         </IconButton>
 

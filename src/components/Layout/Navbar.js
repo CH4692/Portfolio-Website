@@ -9,12 +9,12 @@ const StyledToolbar = styled(Toolbar)({
 })
 
 
-const StyledNavListItem = styled(Button)({
-    color: 'whitesmoke',
+const StyledNavListItem = styled(Button)(({theme}) => ({
+    color: theme.palette.primary.contrastText,
     transition: '0.25s ease-in-out',
     margin: '5px',
     "&:hover": {
-        backgroundColor: "#2196f3",
+        backgroundColor: theme.palette.primary.light,
         transform: 'scale(1.07)'
     }
     // THIS MAYBE NEEDS TO BE ADDED FOR MOBILE DEVICES -> TRY OUT AT RELEASE
@@ -27,19 +27,19 @@ const StyledNavListItem = styled(Button)({
     //     backgroundColor: "#2196f3",
     //     transform: 'scale(1.07)'
     // }
-})
+}))
 
-const StyledLogo = styled(Button)({
-    color: 'whitesmoke',
+const StyledLogo = styled(Button)(({theme}) => ({
+    color: theme.palette.primary.contrastText,
 
-})
+}))
 
 
 const Navbar = () => {
 
     return (
         <>
-            <AppBar position='sticky'>
+            <AppBar position='sticky' sx={{backgroundColor: 'primary'}}>
                 <StyledToolbar sx={{ display: 'flex' }}>
                     <Link to={'/home'} style={{ textDecoration: 'none' }}>
                         <StyledLogo >

@@ -20,6 +20,7 @@ const Skills = () => {
     }
 
     const iconColor = { color: '#4dabf5' }
+    // What to do with this color ?
 
     return (
         <>

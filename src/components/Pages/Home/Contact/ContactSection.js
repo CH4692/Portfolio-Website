@@ -5,9 +5,9 @@ const ContactSection = () => {
     return (
         <>
             <Box display={'flex'} sx={{ pt: '11em' }}>
-                <Box flex={1} pt={8} pb={8} bgcolor={'#2196f3'}>
+                <Box flex={1} pt={8} pb={8} bgcolor={'primary.light'}>
                     <Divider >
-                        <Typography variant='h4' fontWeight={'bold'} color={'#fff'}>
+                        <Typography variant='h4' fontWeight={'bold'} color={'primary.contrastText'}>
                             Contact Me
                         </Typography>
                     </Divider>

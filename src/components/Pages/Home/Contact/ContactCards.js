@@ -17,12 +17,21 @@ const ContactCards = () => {
        
     }, [])
 
+    const contactCards = {
+        backgroundColor: 'white',
+        width: '350px',
+        height: '300px',
+        border: 1,
+        borderRadius: 8,
+        borderColor: 'primary.light'
+    }
+
     return (
         <Box className='contact-cards' >
-            <Box bgcolor={'white'} width={'350px'} height={'300px'} border={1} borderColor={'#2196f3'} borderRadius={8}>
+            <Box sx={contactCards}>
                 <CardContent>
                     <Typography textAlign={'center'} sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-                        <ChatIcon sx={{ color: '#4dabf5', fontSize: '64px' }} />
+                        <ChatIcon sx={{ color: 'primary.light', fontSize: '64px' }} />
                     </Typography>
                     <Typography textAlign={'center'} variant="h4" component="div">
                         Chat
@@ -32,13 +41,13 @@ const ContactCards = () => {
                     </Typography>
                 </CardContent>
                 <Box display={'flex'} justifyContent={'center'} mt={'20px'}>
-                    <Button className='chat-button' sx={{ textTransform: 'capitalize' }} variant='contained' size="large">to livechat</Button>
+                    <Button className='chat-button' sx={{ textTransform: 'capitalize', bgcolor:'primary.main' }} variant='contained' size="large">to livechat</Button>
                 </Box>
             </Box>
-            <Box bgcolor={'white'} width={'350px'} height={'300px'} border={1} borderColor={'#2196f3'} borderRadius={8}>
+            <Box sx={contactCards}>
                 <CardContent>
                     <Typography textAlign={'center'} sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-                        <ContactMailIcon fontSize='large' sx={{ color: '#4dabf5', fontSize: '64px' }} />
+                        <ContactMailIcon fontSize='large' sx={{ color: 'primary.light', fontSize: '64px' }} />
                     </Typography>
                     <Typography textAlign={'center'} variant="h4" component="div">
                         Mail
@@ -49,7 +58,7 @@ const ContactCards = () => {
                 </CardContent>
                 <Box display={'flex'} justifyContent={'center'} mt={'20px'} >
                     <Link href="mailto:charles.heller@hotmail.de">
-                        <Button sx={{ textTransform: 'capitalize' }} variant='contained' size="large">to mail</Button>
+                        <Button sx={{ textTransform: 'capitalize', bgcolor:'primary.main' }} variant='contained' size="large">to mail</Button>
                     </Link>
                 </Box>
             </Box>
