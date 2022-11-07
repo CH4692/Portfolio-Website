@@ -5,14 +5,14 @@ import React from 'react'
 
 const hoverIcons = {
   "&:hover": {
-    backgroundColor: '#fff',
+    backgroundColor: 'primary.contrastText',
   }
 }
 
 const hoverIconsChangeColor = {
   transition: '0.25s ease-in-out',
   "&:hover": {
-    color: 'skyblue',
+    color: 'primary.light',
     transform: 'translateY(-5px)',
   }
   // ,
@@ -30,8 +30,8 @@ const StyledTooltip = styled(({ className, ...props }) => (
   <Tooltip {...props} classes={{ popper: className }} />
 ))(({ theme }) => ({
   [`& .${tooltipClasses.tooltip}`]: {
-    backgroundColor: '#e3f2fd',
-    color: 'black'
+    backgroundColor: theme.palette.primary.light,
+    color: theme.palette.primary.contrastText
   },
 }));
 

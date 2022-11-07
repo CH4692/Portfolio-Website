@@ -20,18 +20,18 @@ export default function ControlledAccordions() {
         <div style={{marginTop: '60px'}}>
             <Accordion sx={{bgcolor: 'primary.light'}} expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
                 <AccordionSummary
-                    expandIcon={<ExpandMoreIcon sx={{color: '#fff'}}/>}
+                    expandIcon={<ExpandMoreIcon sx={{color: 'primary.contrastText'}}/>}
                     aria-controls="panel1bh-content"
                     id="panel1bh-header"
-                    sx={{color: '#fff'}}
+                    sx={{color: 'primary.contrastText'}}
                 >
                     <Typography sx={{ width: '33%', flexShrink: 0, textAlign:'center'}}>
-                        <WebhookIcon fontSize='medium' sx={{color: '#fff'}}/>
+                        <WebhookIcon fontSize='medium' sx={{color: 'primary.contrastText'}}/>
                     </Typography>
-                    <Typography fontWeight={'bold'} color={'primary'} sx={{color: '#fff'}} fontSize={'large'}>Software Engineer</Typography>
+                    <Typography fontWeight={'bold'} color={'primary'} sx={{color: 'primary.contrastText'}} fontSize={'large'}>Software Engineer</Typography>
                 </AccordionSummary >
                 <AccordionDetails >
-                    <Typography sx={{color: '#fff'}}>
+                    <Typography sx={{color: 'primary.contrastText'}}>
                         I'm a accredited software engineer who develops Native Apps,
                         client-side and server-side applications with modern features like<br />
                         SPA (React.js) <br /> <br />
@@ -40,17 +40,17 @@ export default function ControlledAccordions() {
             </Accordion>
             <Accordion expanded={expanded === 'panel2'} onChange={handleChange('panel2')} sx={{bgcolor: 'primary.light'}}>
                 <AccordionSummary
-                    expandIcon={<ExpandMoreIcon sx={{color: '#fff'}}/>}
+                    expandIcon={<ExpandMoreIcon sx={{color: 'primary.contrastText'}}/>}
                     aria-controls="panel2bh-content"
                     id="panel2bh-header"
                 >
-                    <Typography sx={{ width: '33%', flexShrink: 0, textAlign:'center'}}><WebIcon fontSize='medium' sx={{color: '#fff'}}/></Typography>
-                    <Typography sx={{color: '#fff', fontWeight:'bold'}} fontSize={'large'}>
+                    <Typography sx={{ width: '33%', flexShrink: 0, textAlign:'center'}}><WebIcon fontSize='medium' sx={{color: 'primary.contrastText'}}/></Typography>
+                    <Typography sx={{color: 'primary.contrastText', fontWeight:'bold'}} fontSize={'large'}>
                         Frontend
                     </Typography>
                 </AccordionSummary>
                 <AccordionDetails>
-                    <Typography sx={{color: '#fff'}}>
+                    <Typography sx={{color: 'primary.contrastText'}}>
                         I place great value and focus on design and security in the frontend and<br />
                         a trustworthy and smart administration as well as maintenance in the backend.<br /><br />
                     </Typography>
@@ -58,19 +58,19 @@ export default function ControlledAccordions() {
             </Accordion>
             <Accordion sx={{bgcolor: 'primary.light'}} expanded={expanded === 'panel3'} onChange={handleChange('panel3')}>
                 <AccordionSummary
-                    expandIcon={<ExpandMoreIcon sx={{color: '#fff'}}/>}
+                    expandIcon={<ExpandMoreIcon sx={{color: 'primary.contrastText'}}/>}
                     aria-controls="panel3bh-content"
                     id="panel3bh-header"
                 >
                     <Typography sx={{ width: '33%', flexShrink: 0, textAlign: 'center'}}>
-                        <StorageIcon fontSize='medium' sx={{color: '#fff'}}/>
+                        <StorageIcon fontSize='medium' sx={{color: 'primary.contrastText'}}/>
                     </Typography>
-                    <Typography sx={{color: '#fff', fontWeight:'bold'}} fontSize={'large'}>
+                    <Typography sx={{color: 'primary.contrastText', fontWeight:'bold'}} fontSize={'large'}>
                         Backend
                     </Typography>
                 </AccordionSummary>
                 <AccordionDetails>
-                    <Typography sx={{color: '#fff'}}>
+                    <Typography sx={{color: 'primary.contrastText'}}>
                         I build scalable and maintainable server applications using modern <br />
                         technology stacks such as Node.js, Express, and MongoDB.
                         <br />
@@ -79,17 +79,17 @@ export default function ControlledAccordions() {
             </Accordion>
             <Accordion sx={{bgcolor: 'primary.light'}} expanded={expanded === 'panel4'} onChange={handleChange('panel4')}>
                 <AccordionSummary
-                    expandIcon={<ExpandMoreIcon sx={{color: '#fff'}}/>}
+                    expandIcon={<ExpandMoreIcon sx={{color: 'primary.contrastText'}}/>}
                     aria-controls="panel4bh-content"
                     id="panel4bh-header"
                 >
-                    <Typography sx={{ width: '33%', flexShrink: 0, textAlign:'center' }}><AppShortcutIcon fontSize='medium' sx={{color: '#fff'}}/></Typography>
-                    <Typography sx={{color: '#fff', fontWeight:'bold'}} fontSize={'large'}>
+                    <Typography sx={{ width: '33%', flexShrink: 0, textAlign:'center' }}><AppShortcutIcon fontSize='medium' sx={{color: 'primary.contrastText'}}/></Typography>
+                    <Typography sx={{color: 'primary.contrastText', fontWeight:'bold'}} fontSize={'large'}>
                         Native Apps
                     </Typography>
                 </AccordionSummary>
                 <AccordionDetails>
-                    <Typography sx={{color: '#fff'}}>
+                    <Typography sx={{color: 'primary.contrastText'}}>
                         I build mobile Apps and Native Apps.
                     </Typography>
                 </AccordionDetails>

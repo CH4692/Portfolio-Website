@@ -20,6 +20,7 @@ const Skills = () => {
     }
 
     const iconColor = { color: '#4dabf5' }
+    // What to do with this color ?
 
     return (
         <>
@@ -38,7 +39,7 @@ const Skills = () => {
             </Box>
             <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: '100%', mt: '70px' }}>
                 <Link to={'/charles'} style={{ textDecoration: 'none' }}>
-                    <StyledButton sx={{ backgroundColor: '#03a9f4', '&:hover': { backgroundColor: '#0288d1' } }} size='large' variant="contained" endIcon={< InfoOutlinedIcon />}>
+                    <StyledButton aria-label='More Details' size='large' variant="contained" endIcon={< InfoOutlinedIcon />}>
                         More Details
                     </StyledButton>
                 </Link>

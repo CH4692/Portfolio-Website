@@ -1,6 +1,5 @@
-import { ContactPage, EmojiPeople, Home, HomeRepairService } from '@mui/icons-material'
-import { AppBar, Toolbar, styled, Typography, Button, IconButton } from '@mui/material'
-import MenuIcon from '@mui/icons-material/Menu';
+import { ContactPage, EmojiPeople, HomeRepairService } from '@mui/icons-material'
+import { AppBar, Toolbar, styled, Typography, Button } from '@mui/material'
 import React from 'react'
 import { Link } from 'react-router-dom';
 
@@ -10,12 +9,12 @@ const StyledToolbar = styled(Toolbar)({
 })
 
 
-const StyledNavListItem = styled(Button)({
-    color: 'whitesmoke',
+const StyledNavListItem = styled(Button)(({theme}) => ({
+    color: theme.palette.primary.contrastText,
     transition: '0.25s ease-in-out',
     margin: '5px',
     "&:hover": {
-        backgroundColor: "#2196f3",
+        backgroundColor: theme.palette.primary.light,
         transform: 'scale(1.07)'
     }
     // THIS MAYBE NEEDS TO BE ADDED FOR MOBILE DEVICES -> TRY OUT AT RELEASE
@@ -28,55 +27,39 @@ const StyledNavListItem = styled(Button)({
     //     backgroundColor: "#2196f3",
     //     transform: 'scale(1.07)'
     // }
-})
+}))
 
-const StyledLogo = styled(Button)({
-    color: 'whitesmoke',
-    
-})
+const StyledLogo = styled(Button)(({theme}) => ({
+    color: theme.palette.primary.contrastText,
 
-const StyledMenuIcon = styled(MenuIcon)({
-    color: 'whitesmoke',
-    margin: '5px',
-    borderRadius: '10px'
-})
+}))
 
-const StyledHomeIcon = styled(Home)({
-    color: 'whitesmoke',
-    margin: '5px',
-    borderRadius: '10px'
-})
 
 const Navbar = () => {
+
     return (
-        <AppBar position='sticky'>
-            <StyledToolbar sx={{display: 'flex'}}>
-                <Link to={'/home'} style={{ textDecoration: 'none'}}>
-                    <StyledLogo sx={{ display: { xs: 'none', sm: 'block' }}}>
-                        <Typography sx={{fontFamily: 'Lemon, cursive'}} variant='h4'>CH</Typography>
-                    </StyledLogo>
-                    <IconButton sx={{ display: { xs: 'block', sm: 'none' } }}>
-                        <StyledHomeIcon  />
-                    </IconButton>
-                </Link>
-                <Toolbar sx={{ display: { xs: 'none', sm: 'flex' } }}>
-                    <Link to={'/charles'} style={{ textDecoration: 'none' }}>
-                        <StyledNavListItem variant="Text" sx endIcon={<EmojiPeople />}>Charles</StyledNavListItem>
+        <>
+            <AppBar position='sticky' sx={{backgroundColor: 'primary'}}>
+                <StyledToolbar sx={{ display: 'flex' }}>
+                    <Link to={'/home'} style={{ textDecoration: 'none' }}>
+                        <StyledLogo >
+                            <Typography sx={{ fontFamily: 'Lemon, cursive' }} variant='h4'>CH</Typography>
+                        </StyledLogo>
                     </Link>
-                    <Link to={'/projects'} style={{ textDecoration: 'none' }}>
-                        <StyledNavListItem variant="Text" sx endIcon={<HomeRepairService />}>Projects</StyledNavListItem>
-                    </Link>
-                    <Link to={'/contact'} style={{ textDecoration: 'none' }}>
-                        <StyledNavListItem variant="Text" sx endIcon={<ContactPage />}>Contact</StyledNavListItem>
-                    </Link>
-                </Toolbar>
-                <Toolbar sx={{ display: { xs: 'flex', sm: 'none' } }}>
-                    <IconButton>
-                        <StyledMenuIcon />
-                    </IconButton>
-                </Toolbar>
-            </StyledToolbar>
-        </AppBar>
+                    <Toolbar sx={{ display: { xs: 'none', sm: 'flex' } }}>
+                        <Link to={'/charles'} style={{ textDecoration: 'none' }}>
+                            <StyledNavListItem variant="Text" sx endIcon={<EmojiPeople />}>Charles</StyledNavListItem>
+                        </Link>
+                        <Link to={'/projects'} style={{ textDecoration: 'none' }}>
+                            <StyledNavListItem variant="Text" sx endIcon={<HomeRepairService />}>Projects</StyledNavListItem>
+                        </Link>
+                        <Link to={'/contact'} style={{ textDecoration: 'none' }}>
+                            <StyledNavListItem variant="Text" sx endIcon={<ContactPage />}>Contact</StyledNavListItem>
+                        </Link>
+                    </Toolbar>
+                </StyledToolbar>
+            </AppBar >
+        </>
     )
 }
 

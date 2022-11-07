@@ -18,6 +18,6 @@ export const StyledProjectContainer = {
     width: '100%',
     flexDirection: {xs: 'column', md: ''},
     paddingTop: '4em',
-    backgoundColor: 'red'
+    backgoundColor: 'black'
 }
 
